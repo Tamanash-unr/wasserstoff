@@ -7,6 +7,7 @@ function Overview(){
     const year = 2021; // hardcoded for now, will be dynamic later
     const investments = [];
 
+    // Get investments of all countries except World(XW) and others starting with code UN
     for(const country of Object.keys(dataset)){
         if(country != "XW" && !country.includes("UN_")){
             investments.push(dataset[country].flows[year - 2000]);
@@ -16,10 +17,12 @@ function Overview(){
     // Sort in Ascending Order
     investments.sort(function(a, b){return a-b})
     
+    // Get the Highest Invested Amount in given year
     function getHighestInvested(){
         return investments[investments.length - 1]
     }
 
+    // Get the Lowest Invested Amount in given year
     function getLowestInvested(){
         for(const i of investments){
             if(i !== 0){
@@ -28,6 +31,7 @@ function Overview(){
         }
     }
 
+    // Get Countries with no Investments in given year
     function getNoInvestments(){
         let count = 0;
 
@@ -58,6 +62,7 @@ function Overview(){
         return newData;
     }
 
+    // Custom Styling function for Map Component
     const stylingFunction = ({
         countryValue,
         minValue,
@@ -92,7 +97,7 @@ function Overview(){
                 <section>
                     <div className="section_top">
                         <div className="section_top_head">
-                            All Over World
+                            All Over World ({year})
                         </div>
                         <div className="section_top_content">
                             $ {dataset["XW"].flows[year - 2000].toLocaleString("en-US")}
