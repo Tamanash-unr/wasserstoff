@@ -1,0 +1,18 @@
+.overview{
+    display: flex;
+    width: 100%;
+}
+
+.overview_left{
+    width: 40%;
+    z-index: 1;
+    padding-left: 40px;
+}
+
+.overview_left .heading{
+    font-size: 18px;
+}
+
+.overview_right{
+    width: 100%;
+}

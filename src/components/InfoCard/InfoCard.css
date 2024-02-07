@@ -1,0 +1,27 @@
+.info_card{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info_card_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    height: 65px;
+    width: 65px;
+    border-radius: 15px;
+}
+
+.info_card_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+.info_card_value{
+    font-weight: 800;
+}
