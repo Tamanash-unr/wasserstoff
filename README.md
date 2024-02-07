@@ -9,6 +9,12 @@ Frontend for Data Analysis for International Finance received for clean energy (
 - CSS
 - Javascript
 
+## Libraries Used
+
+- React Circular Progress Bar
+- React SVG Worldmap
+- @mui/x-charts
+
 ## Steps to Run
 
 - Clone this Repository or Download the .zip
@@ -16,3 +22,6 @@ Frontend for Data Analysis for International Finance received for clean energy (
 - Run the command "npm install" to install all prerequisites.
 - After all required packages are installed. Run the command "npm start"
 - Navigate to "http://localhost:3000" to see the deployed project
+
+## Public Link
+[🌐Link](https://dataanalysis-s0x0.onrender.com/)
