@@ -1,0 +1,13 @@
+.circular_info_card{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.circular_info_card_elem{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}

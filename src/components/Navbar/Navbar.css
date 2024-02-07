@@ -5,6 +5,17 @@
     padding: 0px 20px;
 }
 
+.company_logo{
+    display: flex;
+    align-items: center;
+}
+
+.company_logo img{
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
 .search-bar input{
     width: 450px;
     border-radius: 8px;

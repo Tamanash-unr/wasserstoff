@@ -1,0 +1,21 @@
+.hoverCard{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    z-index: 1;
+    border-radius: 25px;
+    box-shadow: 10px 12px 25px #383874;
+    padding: 15px;
+}
+
+.hoverCard p{
+    padding: 15px;
+    width: 10%;
+}

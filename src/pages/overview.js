@@ -2,6 +2,8 @@ import "./Overview.css";
 import dataset from "../dataset/dataset.json";
 import { WorldMap, CountryContext}  from "react-svg-worldmap";
 import InfoCard from "../components/InfoCard/InfoCard";
+import CircularInfoCard from "../components/CircularInfoCard/CircularInfoCard";
+import HoverCard from "../components/HoverCard/HoverCard";
 
 function Overview(){
     const year = 2021; // hardcoded for now, will be dynamic later
@@ -9,7 +11,7 @@ function Overview(){
 
     // Get investments of all countries except World(XW) and others starting with code UN
     for(const country of Object.keys(dataset)){
-        if(country != "XW" && !country.includes("UN_")){
+        if(country !== "XW" && !country.includes("UN_")){
             investments.push(dataset[country].flows[year - 2000]);
         }
     }
@@ -36,7 +38,7 @@ function Overview(){
         let count = 0;
 
         for(const i of investments){
-            if(i == 0){
+            if(i === 0){
                 count += 1;
             } else {
                 break;
@@ -124,7 +126,17 @@ function Overview(){
                         />
                     </div>
                     <div className="section_bottom">
-
+                        <CircularInfoCard 
+                            valueA={getNoInvestments()}
+                            valueB={investments.length}
+                            textValue="Total Countries With Investments"
+                            isNeutral={true}
+                        />
+                        <CircularInfoCard
+                            valueA={dataset["XW"].flows[year - 1 - 2000]}
+                            valueB={dataset["XW"].flows[year - 2000]}
+                            textValue="Investments than Last Year"
+                        />
                     </div>
                 </section>
             </div>
@@ -138,6 +150,7 @@ function Overview(){
                     styleFunction={stylingFunction}
                 />
             </div>
+            <HoverCard chartData={dataset["XW"]}/>
         </div>    
     );
 }

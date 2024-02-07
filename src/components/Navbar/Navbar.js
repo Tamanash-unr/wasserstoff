@@ -17,7 +17,8 @@ function Navbar(){
 
     return (
         <div className="navbar">
-            <Link to={'/'}>
+            <Link to={'/'} className="company_logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKkBDBOheUTAbSB_xIkrQTnsc2il2mcvI-YeZS7JA9kg&s" alt="Company Logo..."/>
                 <h3>WASSERSTOFF</h3>
             </Link>
             <div className="search-bar">
