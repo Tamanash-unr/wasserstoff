@@ -16,3 +16,18 @@
 .overview_right{
     width: 100%;
 }
+
+section{
+    margin-top: 60px;
+    color: #383874;
+}
+
+.section_top_head{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.section_top_content{
+    font-size: 45px;
+    font-weight: 800;
+}

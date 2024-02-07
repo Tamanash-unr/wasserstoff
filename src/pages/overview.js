@@ -6,19 +6,11 @@ import InfoCard from "../components/InfoCard/InfoCard";
 function Overview(){
     const year = 2021; // hardcoded for now, will be dynamic later
     
-    // const data = [
-    //     { country: "cn", value: 1389618778 }, // china
-    //     { country: "in", value: 1311559204 }, // india
-    //     { country: "us", value: 331883986 }, // united states
-    //     { country: "id", value: 264935824 }, // indonesia
-    //     { country: "pk", value: 210797836 }, // pakistan
-    //     { country: "br", value: 210301591 }, // brazil
-    //     { country: "ng", value: 208679114 }, // nigeria
-    //     { country: "bd", value: 161062905 }, // bangladesh
-    //     { country: "ru", value: 141944641 }, // russia
-    //     { country: "mx", value: 127318112 }, // mexico
-    //   ];
+    function getHighestInvestedCountry(){
 
+    }
+
+    // Get Countrywise Map Data
     function filterData(){
         const newData = [];
 
@@ -44,7 +36,12 @@ function Overview(){
                 </p>
                 <section>
                     <div className="section_top">
-
+                        <div className="section_top_head">
+                            All Over World
+                        </div>
+                        <div className="section_top_content">
+                            $ {dataset["XW"].flows[year - 2000].toLocaleString("en-US")}
+                        </div>
                     </div>
                     <div className="section_main">
                         <InfoCard />
